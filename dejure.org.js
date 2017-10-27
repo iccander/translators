@@ -98,7 +98,7 @@ function scrape(doc, url, type) {
 	if (type == "case") {
 		var headline = ZU.xpathText(doc, './/td[contains(@class, "urteilszeile")]');
 		var posComma = headline.indexOf(",");
-		var posDash = headline.indexOf("-");
+		var posDash = headline.indexOf(" - ");
 		if (posComma>0) {
 			item.court = headline.substr(0, posComma);
 		}
